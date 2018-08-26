@@ -20,7 +20,7 @@ Test_13:
           y2Equation: 3 * (u/2400 * sin(floor((u/40)^0.7)^5)^2) * rand(0,1)
           z2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
         parameters:
-          particles2: "3 * (floor(3 * (t/30 * sin(floor((t * 1.5)^0.7)^5)^2)) + 1)"
+          particles2: 3 * (floor(3 * (t/30 * sin(floor((t * 1.5)^0.7)^5)^2)) + 1)
     eff2:
       position: caster
       effect: effectlib
@@ -40,4 +40,4 @@ Test_13:
           y2Equation: 3 * (u/2400 * sin(floor((u/40)^0.7)^5)^2) * rand(0,1)
           z2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
         parameters:
-          particles2: "3 * (floor(3 * (t/30 * sin(floor((t * 1.5)^0.7)^5)^2)) + 1)"
+          particles2: 3 * (floor(3 * (t/30 * sin(floor((t * 1.5)^0.7)^5)^2)) + 1)
