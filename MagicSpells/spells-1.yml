@@ -1,0 +1,85 @@
+Test_1:
+  spell-class: ".instant.DummySpell"
+  can-cast-by-command: true
+  effects:
+    eff1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: SMOKE_LARGE
+        particles: 4
+        particles2: 32
+        speed: 0.02
+        duration: 3000
+        iterations: 1
+        cycle: true
+        orient: false
+        orientPitch: true
+        xEquation: 0
+        yEquation: 0.25
+        zEquation: 0
+        x2Equation: 2 * (t2/8 + 1)^sqrt(2) * cos(t2/8 - 3.1415 * t / 120)
+        y2Equation: 0
+        z2Equation: 2 * (t2/8 + 1)^sqrt(2) * sin(t2/8 - 3.1415 * t / 120)
+    eff2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        particles: 8
+        particles2: 64
+        duration: 3000
+        iterations: 1
+        cycle: true
+        orient: false
+        orientPitch: true
+        xEquation: 0
+        yEquation: 0.25
+        zEquation: 0
+        x2Equation: 2 * (t2/16 + 1)^sqrt(2) * cos(t2/16 - 3.1415 * t / 240)
+        y2Equation: 0
+        z2Equation: 2 * (t2/16 + 1)^sqrt(2) * sin(t2/16 - 3.1415 * t / 240)
+Test_2:
+  spell-class: ".instant.DummySpell"
+  can-cast-by-command: true
+  effects:
+    eff1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: SPELL_WITCH
+        particles: 4
+        particles2: 100
+        duration: 900
+        iterations: 1
+        cycle: true
+        orientPitch: true
+        orient: false
+        xEquation: 0
+        yEquation: 2 * 0.688 + 2 * ( 3.1415 / 64 * t ) * 2.7183 ^ ( -0.25 * ( 3.1415 / 64 * t )^2 ) * cos ( 4 * ( 3.1415 / 64 * t ) )
+        zEquation: 0
+        x2Equation: 2 * ( 3.1415 / 64 * t ) * cos ( 3.1415 / 50 * t2 )
+        y2Equation: 0
+        z2Equation: 2 * (3.1415 / 64) * t * sin ( 3.1415 / 50 * t2 )
+    eff2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: FLAME
+        particles: 1
+        particles2: 50
+        duration: 900
+        iterations: 1
+        cycle: true
+        orientPitch: true
+        orient: false
+        xEquation: 0
+        yEquation: 2 * 0.688 + 2 * ( 3.1415 / 16 * t ) * 2.7183 ^ ( -0.25 * ( 3.1415 / 16 * t )^2 ) * cos ( 4 * ( 3.1415 / 16 * t ) )
+        zEquation: 0
+        x2Equation: 2 * ( 3.1415 / 16 * t ) * cos ( 3.1415 / 25 * t2 )
+        y2Equation: 0
+        z2Equation: 2 * (3.1415 / 16) * t * sin ( 3.1415 / 25 * t2 )

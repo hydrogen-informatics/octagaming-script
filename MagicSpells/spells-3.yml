@@ -1,0 +1,47 @@
+Test_4:
+  spell-class: ".instant.DummySpell"
+  effects:
+    eff1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 6600CC
+        particles: 56
+        particles2: 7
+        duration: 5000
+        iterations: 1
+        cycle: true
+        xEquation: 2 * ((t - 500) * sqrt(3) / 250) + 4 * sqrt(3)
+        yEquation: 2 * cos (3.1415 * ((t - 500) * sqrt(3) / 250)) * 2.7183^(-((t - 500) * sqrt(3) / 250)^2) * cos ((2 * 3.1415 / 7 * t2)) + 1
+        zEquation: 2 * cos (3.1415 * ((t - 500) * sqrt(3) / 250)) * 2.7183^(-((t - 500) * sqrt(3) / 250)^2) * sin ((2 * 3.1415 / 7 * t2))
+    eff2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: FF00CC
+        particles: 56
+        particles2: 7
+        duration: 5000
+        iterations: 1
+        cycle: true
+        xEquation: 2 * ((t - 500) * sqrt(3) / 250) + 4 * sqrt(3)
+        yEquation: 2 * cos (3.1415 * ((t - 500) * sqrt(3) / 250)) * 2.7183^(-((t - 500) * sqrt(3) / 250)^2) * cos ((2 * 3.1415 / 7 * t2)) + 1
+        zEquation: 2 * cos (3.1415 * ((t - 500) * sqrt(3) / 250)) * 2.7183^(-((t - 500) * sqrt(3) / 250)^2) * sin ((2 * 3.1415 / 7 * t2))
+    eff3:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: FLAME
+        particles: 4
+        particles2: 7
+        duration: 5000
+        iterations: 1
+        cycle: true
+        xEquation: 2 * ((t - 50) * sqrt(3) / 25) + 4 * sqrt(3)
+        yEquation: 2 * cos (3.1415 * ((t - 50) * sqrt(3) / 25)) * 2.7183^(-((t - 50) * sqrt(3) / 25)^2) * cos ((2 * 3.1415 / 7 * t2)) + 1
+        zEquation: 2 * cos (3.1415 * ((t - 50) * sqrt(3) / 25)) * 2.7183^(-((t - 50) * sqrt(3) / 25)^2) * sin ((2 * 3.1415 / 7 * t2))

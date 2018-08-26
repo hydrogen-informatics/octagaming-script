@@ -1,0 +1,43 @@
+Test_13:
+  spell-class: ".instant.DummySpell"
+  effects:
+    eff1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: Modified
+        duration: 2000
+        effect:
+          class: EquationEffect
+          particle: REDSTONE
+          color: 830DD9
+          particles: 60
+          duration: 2000
+          variable: u
+          variable2: u2
+          orient: false
+          x2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * cos(u/80)
+          y2Equation: 3 * (u/2400 * sin(floor((u/40)^0.7)^5)^2) * rand(0,1)
+          z2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
+        parameters:
+          particles2: "3 * (floor(3 * (t/30 * sin(floor((t * 1.5)^0.7)^5)^2)) + 1)"
+    eff2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: Modified
+        duration: 2000
+        effect:
+          class: EquationEffect
+          particle: REDSTONE
+          color: E224E8
+          particles: 60
+          duration: 2000
+          variable: u
+          variable2: u2
+          orient: false
+          x2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * cos(u/80)
+          y2Equation: 3 * (u/2400 * sin(floor((u/40)^0.7)^5)^2) * rand(0,1)
+          z2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
+        parameters:
+          particles2: "3 * (floor(3 * (t/30 * sin(floor((t * 1.5)^0.7)^5)^2)) + 1)"

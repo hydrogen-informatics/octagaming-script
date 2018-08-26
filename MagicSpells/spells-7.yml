@@ -1,0 +1,183 @@
+beam:
+  spell-class: ".instant.ParticleProjectileSpell"
+  projectile-velocity: 20
+  projectile-gravity: 0
+  tick-interval: 1
+  hit-radius: 3
+  special-effect-interval: 12
+  cooldown: 0
+  particle-count: 0
+  max-distance: 128
+  stop-on-hit-ground: true
+  stop-on-hit-entity: false
+  spell: beam_explode
+  effects:
+    eff1_1:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: E224E8
+        particles: 4
+        particles2: 20
+        duration: 1200
+        iterations: 1
+        orientPitch: true
+        cycle: true
+        xEquation: 0.2 * t
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 8 * 2.7183^(-(0.1 * floor(t / 8) * 8 - 2.7183)^2) * sin(0.1*floor(t / 8) * 8) * cos(t/10 + 3.1415 * 2 / 30 * t2)
+        z2Equation: 8 * 2.7183^(-(0.1 * floor(t / 8) * 8 - 2.7183)^2) * sin(0.1*floor(t / 8) * 8) * sin(t/10 + 3.1415 * 2 / 30 * t2)
+    eff1_2:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 830DD9
+        particles: 4
+        particles2: 20
+        duration: 600
+        iterations: 1
+        orientPitch: true
+        cycle: true
+        xEquation: 0.2 * t
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 8 * 2.7183^(-(0.2 * floor(t / 8) * 8 - 2.7183)^2) * sin(0.1*floor(t / 8) * 8) * cos(t/10 + 3.1415 * 2 / 30 * t2)
+        z2Equation: 8 * 2.7183^(-(0.2 * floor(t / 8) * 8 - 2.7183)^2) * sin(0.1*floor(t / 8) * 8) * sin(t/10 + 3.1415 * 2 / 30 * t2)
+    eff2_1:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: E224E8
+        particles: 5
+        duration: 600
+        iterations: 1
+        orientPitch: true
+        cycle: true
+        xEquation: 0.2 * t
+        yEquation: 0
+        zEquation: 0
+    eff2_2:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 830DD9
+        particles: 5
+        duration: 600
+        iterations: 1
+        orientPitch: true
+        cycle: true
+        xEquation: 0.2 * t
+        yEquation: 0
+        zEquation: 0
+    eff3_1:
+      position: special
+      delay: 6
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: E224E8
+        particles: 10
+        particles2: 100
+        duration: 50
+        iterations: 1
+        orientPitch: true
+        cycle: true
+        xEquation: 0.2 * t
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 8 * cos(t/50 + 3.1415 * 2 / 100 * t2)
+        z2Equation: 8 * sin(t/50 + 3.1415 * 2 / 100 * t2)
+    eff3_2:
+      position: special
+      delay: 6
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 830DD9
+        particles: 5
+        particles2: 100
+        duration: 50
+        iterations: 1
+        orientPitch: true
+        cycle: true
+        xEquation: 0.2 * t
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 8 * cos(t/50 + 3.1415 * 2 / 100 * t2)
+        z2Equation: 8 * sin(t/50 + 3.1415 * 2 / 100 * t2)
+beam_explode:
+  spell-class: ".TargetedMultiSpell"
+  require-entity-target: false
+  target-players: true
+  spells:
+  - beam_explode_effect
+  - beam_gunpowder
+beam_gunpowder:
+  spell-class: ".targeted.ExplodeSpell"
+  range: 1
+  explosion-size: 12
+  prevent-block-damage: false
+  prevent-player-damage: false
+  add-fire: true
+  damage-multiplier: 1
+  simulate-tnt: false
+  ignore-canceled: false
+beam_explode_effect:
+  spell-class: ".targeted.DummySpell"
+  can-cast-by-command: true
+  effects:
+    eff1:
+      position: target
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: E224E8
+        particles: 1
+        particles2: 48
+        duration: 6000
+        iterations: 1
+        cycle: true
+        orientPitch: false
+        orient: true
+        xEquation: 0
+        yEquation: 2 + 4 * ( 3.1415 / 64 * t ) * 2.7183 ^ ( -0.25 * ( 3.1415 / 64 * t )^2 ) * cos ( 4 * ( 3.1415 / 64 * t ) )
+        zEquation: 0
+        x2Equation: 4 * ( 3.1415 / 64 * t ) * cos ( 3.1415 / 96 * t2 )
+        y2Equation: 0
+        z2Equation: 4 * (3.1415 / 64) * t * sin ( 3.1415 / 96 * t2 )
+    eff2:
+      position: target
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 830DD9
+        particles: 1
+        particles2: 192
+        duration: 6000
+        iterations: 1
+        cycle: true
+        orientPitch: false
+        orient: true
+        xEquation: 0
+        yEquation: 2 + 4 * ( 3.1415 / 64 * t ) * 2.7183 ^ ( -0.25 * ( 3.1415 / 64 * t )^2 ) * cos ( 4 * ( 3.1415 / 64 * t ) )
+        zEquation: 0
+        x2Equation: 4 * ( 3.1415 / 64 * t ) * cos ( 3.1415 / 96* t2 )
+        y2Equation: 0
+        z2Equation: 4 * (3.1415 / 64) * t * sin ( 3.1415 / 96 * t2 )

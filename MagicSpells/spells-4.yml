@@ -1,0 +1,142 @@
+Test_5:
+  spell-class: ".MultiSpell"
+  spells:
+  - Test_6
+  - Test_7
+Test_6:
+  spell-class: ".instant.ParticleProjectileSpell"
+  projectile-velocity: 20
+  projectile-gravity: 0
+  tick-interval: 1
+  special-effect-interval: 20
+  cooldown: 0
+  particle-count: 0
+  max-distance: 1
+  spells: Test_8
+  effects:
+    eff1:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 355C7D
+        particles: 6
+        particles2: 30
+        duration: 2000
+        iterations: 1
+        cycle: true
+        xEquation: 4 * 3.1415 / 96 * (t - 32)
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 4 * abs(2.7183 ^ (-((3.1415 / 96 * (t - 32))-1)^2) * sin (4 * (3.1415 / 96 * (t - 32)))) * sin (3.1415 / 15 * t2)
+        z2Equation: 4 * (2.7183 ^ (-((3.1415 / 96 * (t - 32))-1)^2) * sin (4 * (3.1415 / 96 * (t - 32)))) * cos (3.1415 / 15 * t2)
+    eff2:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 6C5B7B
+        particles: 6
+        particles2: 30
+        duration: 2000
+        iterations: 1
+        cycle: true
+        xEquation: 4 * 3.1415 / 96 * (t - 32)
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 4 * abs(2.7183 ^ (-((3.1415 / 96 * (t - 32))-1)^2) * sin (4 * (3.1415 / 96 * (t - 32)))) * sin (3.1415 / 15 * t2)
+        z2Equation: 4 * (2.7183 ^ (-((3.1415 / 96 * (t - 32))-1)^2) * sin (4 * (3.1415 / 96 * (t - 32)))) * cos (3.1415 / 15 * t2)
+    eff3:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: C06C84
+        particles: 6
+        particles2: 30
+        duration: 2000
+        iterations: 1
+        cycle: true
+        xEquation: 4 * 3.1415 / 96 * (t - 32)
+        yEquation: 0
+        zEquation: 0
+        x2Equation: 0
+        y2Equation: 4 * abs(2.7183 ^ (-((3.1415 / 96 * (t - 32))-1)^2) * sin (4 * (3.1415 / 96 * (t - 32)))) * sin (3.1415 / 15 * t2)
+        z2Equation: 4 * (2.7183 ^ (-((3.1415 / 96 * (t - 32))-1)^2) * sin (4 * (3.1415 / 96 * (t - 32)))) * cos (3.1415 / 15 * t2)
+Test_8:
+  spells-class: ".instant.DummySpell"
+Test_7:
+  spell-class: ".instant.ParticleProjectileSpell"
+  projectile-velocity: 62.81
+  projectile-gravity: 0
+  tick-interval: 1
+  special-effect-interval: 40
+  cooldown: 0
+  particle-count: 0
+  max-distance: 768
+  stop-on-hit-ground: true
+  stop-on-hit-entity: false
+  spell: Test_9
+  effects:
+    eff4:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 355C7D
+        particles: 48
+        duration: 2000
+        iterations: 1
+        cycle: true
+        xEquation: 4 * 3.1415 / 192 * (t - 64) - 27.23
+        yEquation: 0
+        zEquation: 0
+    eff5:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 6C5B7B
+        particles: 48
+        duration: 2000
+        iterations: 1
+        cycle: true
+        xEquation: 4 * 3.1415 / 192 * (t - 64) - 27.23
+        yEquation: 0
+        zEquation: 0
+    eff6:
+      position: special
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: C06C84
+        particles: 48
+        duration: 2000
+        iterations: 1
+        cycle: true
+        xEquation: 4 * 3.1415 / 192 * (t - 64) - 27.23
+        yEquation: 0
+        zEquation: 0
+Test_9:
+  spell-class: ".TargetedMultiSpell"
+  require-entity-target: false
+  target-players: true
+  spells:
+  - Test_10
+Test_10:
+  spell-class: ".targeted.ExplodeSpell"
+  range: 1
+  explosion-size: 64
+  prevent-block-damage: false
+  add-fire: true
+  damage-multiplier: 1
+  simulate-tnt: false
+  ignore-canceled: false

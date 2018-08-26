@@ -1,0 +1,67 @@
+Test_12:
+  spell-class: ".instant.DummySpell"
+  effects:
+    eff1_1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: E88554
+        particles: 20
+        particles2: 5
+        duration: 1500
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: (t / 100) * cos((t / 10) ^ 0.5 + 2 * 3.1415 / 5 * t2)
+        yEquation: 4 * 2.7183^(-t / 100)
+        zEquation: (t / 100) * sin((t / 10) ^ 0.5 + 2 * 3.1415 / 5 * t2)
+    eff1_2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: FFAF53
+        particles: 20
+        particles2: 5
+        duration: 1500
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: (t / 100) * cos((t / 10) ^ 0.5 + 2 * 3.1415 / 5 * t2)
+        yEquation: 4 * 2.7183^(-t / 100)
+        zEquation: (t / 100) * sin((t / 10) ^ 0.5 + 2 * 3.1415 / 5 * t2)
+    eff2_1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: E88554
+        particles: 20
+        particles2: 5
+        duration: 1500
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: (t / 100) * cos(-(t / 10) ^ 0.5 - 2 * 3.1415 / 5 * t2)
+        yEquation: -4 * 2.7183^(-t / 100)
+        zEquation: (t / 100) * sin(-(t / 10) ^ 0.5 - 2 * 3.1415 / 5 * t2)
+    eff2_2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: FFAF53
+        particles: 20
+        particles2: 5
+        duration: 1500
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: -(t / 200) * cos((t / 10) ^ 0.5 + 2 * 3.1415 / 5 * t2)
+        yEquation: -2 * 2.7183^(-t / 100)
+        zEquation: -(t / 200) * sin((t / 10) ^ 0.5 + 2 * 3.1415 / 5 * t2)

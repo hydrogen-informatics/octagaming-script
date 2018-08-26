@@ -1,0 +1,117 @@
+Test_3:
+  spell-class: ".instant.DummySpell"
+  effects:
+    eff1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: SPELL_WITCH
+        particles: 4
+        particles2: 15
+        duration: 1000
+        iterations: 1
+        cycle: true
+        orient: true
+        orientPitch: false
+        xEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*cos(0.005*3.1415*t + 3.1415 / 6)
+        yEquation: 0
+        zEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*sin(0.005*3.1415*t + 3.1415 / 6)
+        x2Equation: 0
+        y2Equation: 3*2.7183^(-((9/sqrt(2*3.1415))*(0.005*3.1415*t)^0.5/cos((0.005*3.1415*t))-5)^2)*(t2/15)
+        z2Equation: 0
+    eff2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: SPELL_WITCH
+        particles: 4
+        particles2: 15
+        duration: 1000
+        iterations: 1
+        cycle: true
+        orient: true
+        orientPitch: false
+        xEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*cos(0.005*3.1415*t + 2 * 3.1415/3 + 3.1415 / 6)
+        yEquation: 0
+        zEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*sin(0.005*3.1415*t + 2 * 3.1415/3 + 3.1415 / 6)
+        x2Equation: 0
+        y2Equation: 3*2.7183^(-((9/sqrt(2*3.1415))*(0.005*3.1415*t)^0.5/cos((0.005*3.1415*t))-5)^2)*(t2/15)
+        z2Equation: 0
+    eff3:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: SPELL_WITCH
+        particles: 4
+        particles2: 15
+        duration: 1000
+        iterations: 1
+        cycle: true
+        orient: true
+        orientPitch: false
+        xEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*cos(0.005*3.1415*t + 4 * 3.1415 / 3 + 3.1415 / 6)
+        yEquation: 0
+        zEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*sin(0.005*3.1415*t + 4 * 3.1415 / 3 + 3.1415 / 6)
+        x2Equation: 0
+        y2Equation: 3*2.7183^(-((9/sqrt(2*3.1415))*(0.005*3.1415*t)^0.5/cos((0.005*3.1415*t))-5)^2)*(t2/15)
+        z2Equation: 0
+    eff4:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: FLAME
+        particles: 4
+        particles2: 2
+        duration: 1000
+        iterations: 1
+        cycle: true
+        orient: true
+        orientPitch: false
+        xEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*cos(0.005*3.1415*t + 3.1415 / 6)
+        yEquation: 0
+        zEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*sin(0.005*3.1415*t + 3.1415 / 6)
+        x2Equation: 0
+        y2Equation: 3*2.7183^(-((9/sqrt(2*3.1415))*(0.005*3.1415*t)^0.5/cos((0.005*3.1415*t))-5)^2)*(t2/2)
+        z2Equation: 0
+    eff5:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: FLAME
+        particles: 4
+        particles2: 2
+        duration: 1000
+        iterations: 1
+        cycle: true
+        orient: true
+        orientPitch: false
+        xEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*cos(0.005*3.1415*t + 2 * 3.1415/3 + 3.1415 / 6)
+        yEquation: 0
+        zEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*sin(0.005*3.1415*t + 2 * 3.1415/3 + 3.1415 / 6)
+        x2Equation: 0
+        y2Equation: 3*2.7183^(-((9/sqrt(2*3.1415))*(0.005*3.1415*t)^0.5/cos((0.005*3.1415*t))-5)^2)*(t2/2)
+        z2Equation: 0
+    eff6:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: FLAME
+        particles: 4
+        particles2: 2
+        duration: 1000
+        iterations: 1
+        cycle: true
+        orient: true
+        orientPitch: false
+        xEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*cos(0.005*3.1415*t + 4 * 3.1415 / 3 + 3.1415 / 6)
+        yEquation: 0
+        zEquation: (5/sqrt(2*3.1415))*((0.005*3.1415*t)^0.5)/cos((0.005*3.1415*t))*sin(0.005*3.1415*t + 4 * 3.1415 / 3 + 3.1415 / 6)
+        x2Equation: 0
+        y2Equation: 3*2.7183^(-((9/sqrt(2*3.1415))*(0.005*3.1415*t)^0.5/cos((0.005*3.1415*t))-5)^2)*(t2/2)
+        z2Equation: 0

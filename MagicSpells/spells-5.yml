@@ -1,0 +1,60 @@
+Test_11:
+  spell-class: ".instant.DummySpell"
+  effects:
+    eff1:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 6C787F
+        particles: 20
+        particles2: 9
+        duration: 800
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: 0
+        yEquation: 10 * t/320
+        zEquation: 0
+        x2Equation: (6 * (t/160 - 1)^2 + 0.5) * sin(4 * 3.1415 * t/160 + 2 * 3.1415 * t2/9)
+        y2Equation: 0
+        z2Equation: (6 * (t/160 - 1)^2 + 0.5) * cos(4 * 3.1415 * t/160 + 2 * 3.1415 * t2/9)
+    eff2:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: D9F2FF
+        particles: 20
+        particles2: 9
+        duration: 800
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: 0
+        yEquation: 10 * t/320
+        zEquation: 0
+        x2Equation: (6 * (t/160 - 1)^2 + 0.5) * sin(4 * 3.1415 * t/160 + 2 * 3.1415 * t2/9)
+        y2Equation: 0
+        z2Equation: (6 * (t/160 - 1)^2 + 0.5) * cos(4 * 3.1415 * t/160 + 2 * 3.1415 * t2/9)
+    eff3:
+      position: caster
+      effect: effectlib
+      effectlib:
+        class: EquationEffect
+        particle: REDSTONE
+        color: 363D40
+        particles: 20
+        particles2: 9
+        duration: 800
+        iterations: 1
+        orientPitch: false
+        cycle: true
+        xEquation: 0
+        yEquation: 10 * t/320
+        zEquation: 0
+        x2Equation: (6 * (t/160 - 1)^2 + 0.5) * sin(4 * 3.1415 * t/160 + 2 * 3.1415 * t2/9)
+        y2Equation: 0
+        z2Equation: (6 * (t/160 - 1)^2 + 0.5) * cos(4 * 3.1415 * t/160 + 2 * 3.1415 * t2/9)
