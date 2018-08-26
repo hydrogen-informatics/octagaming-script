@@ -15,7 +15,7 @@ Test_13:
           duration: 2000
           variable: u
           variable2: u2
-          orient: false
+          orient: "false"
           x2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * cos(u/80)
           y2Equation: 3 * (u/2400 * sin(floor((u/40)^0.7)^5)^2) * rand(0,1)
           z2Equation: u/2400 * 12 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
