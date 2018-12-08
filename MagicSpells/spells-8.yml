@@ -1,0 +1,145 @@
+Test_13:
+    spell-class: ".MultiSpell"
+    spells:
+        - Test_14_1
+        - Test_14_2
+        - Test_15
+Test_14_2:
+    spell-class: ".ExternalCommandSpell"
+    temporary-op: true
+    command-to-execute:
+        - "/sel fuzzy={[0][64]"
+        - "/hpos2"
+Test_15:
+    spell-class: ".instant.ParticleProjectileSpell"
+    projectile-velocity: 40
+    projectile-gravity: 0
+    tick-interval: 1
+    hit-radius: 0
+    special-effect-interval: 20
+    cooldown: 0
+    particle-count: 0
+    max-distance: 1024
+    stop-on-hit-ground: true
+    stop-on-hit-entity: false
+    spell: Test_16
+    effects:
+        eff1:
+            position: special
+            effect: effectlib
+            effectlib:
+                class: EquationEffect
+                particle: REDSTONE
+                color: 830DD9
+                particles: 80
+                duration: 1000
+                variable: u
+                xEquation: u/40
+                yEquation: 10 * sin(floor((u/40)^0.7)^5)^2 * cos(u/80)
+                zEquation: 10 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
+                visible_range: 256
+        eff2:
+            position: special
+            effect: effectlib
+            effectlib:
+                class: EquationEffect
+                particle: REDSTONE
+                color: E224E8
+                particles: 80
+                duration: 1000
+                variable: u
+                xEquation: u/40
+                yEquation: 10 * sin(floor((u/40)^0.7)^5)^2 * cos(u/80)
+                zEquation: 10 * sin(floor((u/40)^0.7)^5)^2 * sin(u/80)
+                visible_range: 256
+        eff3:
+            position: special
+            effect: effectlib
+            effectlib:
+                class: EquationEffect
+                particle: REDSTONE
+                color: E224E8
+                particles: 10
+                duration: 1000
+                variable: u
+                xEquation: u/5
+                visible_range: 256
+        eff4:
+            position: special
+            effect: effectlib
+            effectlib:
+                class: EquationEffect
+                particle: REDSTONE
+                color: 830DD9
+                particles: 10
+                duration: 1000
+                variable: u
+                xEquation: u/5
+                visible_range: 256
+        eff5:
+            position: special
+            effect: effectlib
+            effectlib:
+                class: EquationEffect
+                particle: REDSTONE
+                color: 830DD9
+                particles: 80
+                duration: 1000
+                variable: u
+                xEquation: u/40
+                yEquation: 10 * sin(floor((u/40)^1.1)^5)^2 * cos(u/80)
+                zEquation: 10 * sin(floor((u/40)^1.1)^5)^2 * sin(u/80)
+                visible_range: 256
+        eff6:
+            position: special
+            effect: effectlib
+            effectlib:
+                class: EquationEffect
+                particle: REDSTONE
+                color: E224E8
+                particles: 80
+                duration: 1000
+                variable: u
+                xEquation: u/40
+                yEquation: 10 * sin(floor((u/40)^1.1)^5)^2 * cos(u/80)
+                zEquation: 10 * sin(floor((u/40)^1.1)^5)^2 * sin(u/80)
+                visible_range: 256
+Test_16:
+    spell-class: ".TargetedMultiSpell"
+    require-entity-target: false
+    target-players: true
+    spells:
+        - Test_17
+        - DELAY 60
+        - Test_18
+        - DELAY 5
+        - Test_19
+
+Test_17:
+   spell-class: ".targeted.DummySpell"
+   effects:
+       eff3:
+           position: target
+           effect: effectlib
+           effectlib:
+               class: Modified
+               duration: 4000
+               orient_pitch: true
+               effect:
+                   class: Sphere
+                   particle: REDSTONE
+                   color: E224E8
+                   visible_range: 256
+               parameters:
+                   radius: "(t/10)*((t/10)^2-8 * (t/10)+16) / 2"
+                   particles: "floor ( 3.1415 * ((t/10)*((t/10)^2-8 * (t/10)+16))^2 )"
+Test_18:
+    spell-class: ".ExternalCommandSpell"
+    temporary-op: true
+    command-to-execute:
+        - "/replace 95%0,5%11"
+Test_19:
+    spell-class: ".ExternalCommandSpell"
+    temporary-op: true
+    command-to-execute:
+        - "/sel"
